@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="de.nilsbaxheinrich.glitchweld.EditWindowController">
+    <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem mnemonicParsing="false" onAction="#save" text="Save"/>
+            <MenuItem mnemonicParsing="false" onAction="#load" text="Load"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" onAction="#close" text="Close"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+            <MenuItem mnemonicParsing="false" text="Delete"/>
+        </Menu>
+    </MenuBar>
+    <ToolBar prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+             AnchorPane.rightAnchor="0.0">
+        <ChoiceBox fx:id="layerSelector" disable="true" prefWidth="70.0"/>
+    </ToolBar>
+    <ScrollPane fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0"
+                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+        <VBox alignment="CENTER">
+            <HBox alignment="CENTER" prefWidth="200.0">
+                <GridPane fx:id="uiGrid" alignment="CENTER" style="-fx-background-color: #aaaaaa;">
+                </GridPane>
+            </HBox>
+        </VBox>
+    </ScrollPane>
+</AnchorPane>
